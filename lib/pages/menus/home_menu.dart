@@ -13,7 +13,9 @@ class HomeMenu extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            children: [],
+            children: [
+              const Text('Home Menu',style: TextStyle(color: NatureColor.black),),
+            ],
           ),
         ));
   }
