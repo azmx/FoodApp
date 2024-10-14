@@ -14,9 +14,8 @@ class CustomButtonRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(0),
+      padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
       child: Container(
-        color: PrimaryColor.primaryColor80,
         height: 40,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,

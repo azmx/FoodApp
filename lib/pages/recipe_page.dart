@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_application/controller/recipe_controller.dart';
+import 'package:food_application/widget/my_color.dart';
 import 'package:get/get.dart';
 import 'package:food_application/model/recipe_models.dart';
 
@@ -11,7 +12,8 @@ class RecipePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(recipe.name),
+        title: Text(recipe.name,
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
       ),
       body: Column(
         children: [
@@ -33,17 +35,33 @@ class RecipePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: PrimaryColor.primaryColor80),
                 onPressed: () {
-                  Get.find<RecipeController>().toggleIngredients(); // Memanggil method untuk menampilkan ingredients
+                  Get.find<RecipeController>()
+                      .toggleIngredients(); // Memanggil method untuk menampilkan ingredients
                 },
-                child: Text('Ingredients'),
+                child: Text(
+                  'Ingredients',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
               SizedBox(width: 10),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: PrimaryColor.primaryColor80),
                 onPressed: () {
-                  Get.find<RecipeController>().toggleProcedure(); // Memanggil method untuk menampilkan procedure
+                  Get.find<RecipeController>()
+                      .toggleProcedure(); // Memanggil method untuk menampilkan procedure
                 },
-                child: Text('Procedure'),
+                child: Text(
+                  'Procedure',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
             ],
           ),

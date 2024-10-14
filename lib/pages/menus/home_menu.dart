@@ -24,17 +24,13 @@ class HomeMenu extends StatelessWidget {
             Container(
               color: PrimaryColor.primaryColor80,
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(15, 10, 15, 0),
-                child: MySearchBar(),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: NatureColor.white,
-                child: ListView(children: [
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                child: Column(children: [
+                  MySearchBar(),
                   Padding(
                       padding: EdgeInsets.all(0),
                       child: Container(
+                        color: Colors.transparent,
                         height: 50,
                         width: 600,
                         child: ListView(
@@ -47,6 +43,13 @@ class HomeMenu extends StatelessWidget {
                           ],
                         ),
                       )),
+                ]),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: ListView(children: [
                   Padding(
                     padding: EdgeInsets.all(0),
                     child: Container(
